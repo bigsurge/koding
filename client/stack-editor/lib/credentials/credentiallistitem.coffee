@@ -91,7 +91,6 @@ module.exports = class CredentialListItem extends kd.ListItemView
 
     @getDelegate()
       .verify this
-      .timeout 10000
       .then (response) =>
         if status = response?[identifier]
           if message = status.message
