@@ -11,7 +11,7 @@ services:
     volumes:
       - .:/opt/koding
     ports:
-      - 8090:8090
+      - 80:80
     links:
       - mongo
       - postgres
@@ -37,7 +37,7 @@ services:
       - .:/opt/koding
 
   mongo:
-    image: koding/mongo
+    image: koding/mongo:test
 
   postgres:
     image: koding/postgres
